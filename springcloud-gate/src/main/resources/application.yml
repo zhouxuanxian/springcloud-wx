@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+
+zuul:
+  prefix: /api
+  strip-prefix: true
+  host:
+    max-per-route-connections: 15000
+    socket-timeout-millis: 15000
+    connect-timeout-millis: 15000
+  routes:
+    sa-func:
+      path: /safunc/**
+      serviceId: sa-func
+      url: http://${SA-FUNC:localhost}:8100/
+    sa-sche:
+      path: /sasche/**
+      serviceId: sa-schedule
+      url: http://${SA-SCHE:localhost}:8101/
+    sa-sync:
+      path: /sasync/**
+      serviceId: sa-sync
+      url: http://${SA-SYNC:localhost}:8102/
+    sa-wx:
+      path: /sawx/**
+      serviceId: sa-wx
+      url: http://${SA-WX:localhost}:8103/
+
+ribbon:
+  ReadTimeout: 15000
+  SocketTimeout: 15000
