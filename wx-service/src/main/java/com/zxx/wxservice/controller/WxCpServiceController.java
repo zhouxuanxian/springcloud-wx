@@ -10,7 +10,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import me.chanjar.weixin.cp.api.WxCpUserService;
-import me.chanjar.weixin.cp.bean.Gender;
 import me.chanjar.weixin.cp.bean.WxCpUser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
