@@ -41,8 +41,8 @@ merge:
 # 测试环境
 wx:
   ma:
-    appid: wxb52e8079e0fe90fe
-    secret: 0893ab57c02961c27c67aac73db8d81d
+    appid: wx21d554e0be46b50f
+    secret: 945f5c0782a17c5130b8c3020c326d97
   cp:
     corpId: wx919fbd2c998bb536
     agentId: 1000030
