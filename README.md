@@ -39,19 +39,11 @@ GuanKe Cloud Framework
 
 ```text
 
--sales_aux
+-springcloud-wx
  |
- |-- sa-core 经销宝核心模块（Eureka注册中心）
+ |-- eureka-server Eureka服务注册中心
  |
- |-- vinda-gate 经销宝网关 
+ |-- springboot-gate 经销宝网关 
  |
- |-- sa-models 公用持久层 
- |
- |-- sa-schedule 公用定时任务 
- |
- |-- sa-func 经销宝功能模块 
- |
- |-- sa-sync 经销宝同步模块 
- |
- |-- sa-wx 经销宝微信相关模块
+ |-- wx-service 微信
 ```
