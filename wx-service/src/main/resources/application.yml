@@ -1,13 +1,11 @@
-logging:
-  level:
-    com.guanke.vinda: DEBUG
+
 
 server:
-  port: 8103
+  port: 8000
 
 spring:
   application:
-    name: sa-wx
+    name: wx-service
   profiles:
     active: dev
 

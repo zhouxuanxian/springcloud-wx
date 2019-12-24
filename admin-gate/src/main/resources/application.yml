@@ -10,6 +10,10 @@ zuul:
     socket-timeout-millis: 15000
     connect-timeout-millis: 15000
   routes:
+    wx-service:
+      path: /wxService/**
+      serviceId: wx-service
+      url: http://${SA-WX:localhost}:8103/
     sa-func:
       path: /safunc/**
       serviceId: sa-func
@@ -26,6 +30,7 @@ zuul:
       path: /sawx/**
       serviceId: sa-wx
       url: http://${SA-WX:localhost}:8103/
+
 
 ribbon:
   ReadTimeout: 15000
