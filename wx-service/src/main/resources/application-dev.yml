@@ -25,7 +25,7 @@ eureka:
     hostname: wx-service
   client:
     serviceUrl:
-      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:8761}/eureka/
+      defaultZone: http://${EUREKA_HOST:localhost}:${EUREKA_PORT:9000}/eureka/
 
 
 # 跨服务数据合并
@@ -37,7 +37,13 @@ merge:
   aop: # 启动注解的方式,自动聚合
     enabled: true
 
+
+# 测试环境
 wx:
-  corpId: ww41012b98245950a2
-  agentId: 1000002
-  secret: HxrpE6vXOYsVjkkkuCwSxUlERmsKWr20iCBnn14iI4c
+  ma:
+    appid: wxb52e8079e0fe90fe
+    secret: 0893ab57c02961c27c67aac73db8d81d
+  cp:
+    corpId: wx919fbd2c998bb536
+    agentId: 1000030
+    secret: LYuFVzcRk2xpnbO0VUwZUiDb1byhq95sjnW9-84_zEo

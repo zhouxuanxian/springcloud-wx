@@ -1,4 +1,4 @@
-package com.guanke.vinda.vindagate;
+package com.zxx.admingate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -6,7 +6,7 @@ MAINTAINER Nicemorning "oypebook@outlook.com"
 VOLUME /tmp
 
 # add project jar file into docker
-ADD sa-wx.jar app.jar
+ADD wx-service.jar app.jar
 
 ADD boot.sh boot.sh
 ADD wait-for-it.sh /wait-for-it.sh

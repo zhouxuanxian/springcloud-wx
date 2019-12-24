@@ -34,6 +34,7 @@
     <modules>
         <module>eureka-server</module>
         <module>admin-gate</module>
+        <module>wx-service</module>
     </modules>
 
     <packaging>pom</packaging>
