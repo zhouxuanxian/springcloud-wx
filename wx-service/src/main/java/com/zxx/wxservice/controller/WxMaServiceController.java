@@ -1,10 +1,8 @@
 package com.zxx.wxservice.controller;
 
 import cn.binarywang.wx.miniapp.bean.WxMaJscode2SessionResult;
-import com.zxx.wxservice.config.WxCp.WxCpConfiguration;
-import com.zxx.wxservice.config.WxCp.WxCpUserInfo;
 import com.zxx.wxservice.config.WxMa.WxMaConfiguration;
-import com.zxx.wxservice.utils.JSONResult;
+import com.zxx.wxservice.mode.response.ObjectGeneralResponseEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -31,15 +29,15 @@ public class WxMaServiceController {
      */
     @ApiOperation("根据code获取WxMaJscode2SessionResult信息")
     @GetMapping("/getWxMaJscode2Session")
-    public JSONResult getWxMaJscode2Session(@RequestParam(name = "code",required = true) @ApiParam("登录临时code") String code){
+    public ObjectGeneralResponseEntity getWxMaJscode2Session(@RequestParam(name = "code",required = true) @ApiParam("登录临时code") String code){
         WxMaJscode2SessionResult session = null;
         try {
             session = WxMaConfiguration.getMaService().jsCode2SessionInfo(code);
         } catch (Exception e) {
             logger.error("openId获取失败!" + e.toString());
-            return JSONResult.errorException("openId获取失败!");
+            return new ObjectGeneralResponseEntity.Builder().data("openId获取失败!").build();
         }
-        return JSONResult.ok(session);
+        return  new ObjectGeneralResponseEntity.Builder().data(session).build();
     }
 
 
